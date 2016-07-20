@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "inam",
+  "name": "It's not a Mod",
+  "description": "Ceci n'est pas un mod. Ce n'est rien du tout d'ailleurs",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Rush'R","Skyle"],
+  "credits": "Merci à Rush'R pour l'idée. Sinon merci à nous déjà, et puis c'est bien suffisant.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
