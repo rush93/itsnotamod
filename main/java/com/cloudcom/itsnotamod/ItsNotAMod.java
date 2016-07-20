@@ -17,7 +17,7 @@ public class ItsNotAMod
     @Instance(ItsNotAMod.MODID)
     public static ItsNotAMod instance;
     
-    @SidedProxy(clientSide = "à modifier ensuite", serverSide = "à modifier ensuite")
+    @SidedProxy(clientSide = "com.cloudcom.itsnotamod.InamClient", serverSide = "com.cloudcom.itsnotamod.InamServer")
     public static InamCommon proxy;
     
     public static Logger logger;
