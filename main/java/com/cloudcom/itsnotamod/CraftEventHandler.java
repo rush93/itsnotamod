@@ -35,8 +35,10 @@ public class CraftEventHandler {
 			// Test
 			System.out.println(color.toString());
 
-			// Spawn de l'entity
-			worldObj.spawnEntityInWorld(entity);
+			if (!worldObj.isRemote){
+				// Spawn de l'entity
+				worldObj.spawnEntityInWorld(entity);
+			}
 		}
 	}
 }

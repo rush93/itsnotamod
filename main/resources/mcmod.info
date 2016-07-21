@@ -1,6 +1,6 @@
 [
 {
-  "modid": "inam",
+  "modid": "inam", 
   "name": "It's not a Mod",
   "description": "Ceci n'est pas un mod. Ce n'est rien du tout d'ailleurs",
   "version": "${version}",
