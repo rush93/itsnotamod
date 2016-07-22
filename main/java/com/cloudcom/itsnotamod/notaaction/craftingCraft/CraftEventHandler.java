@@ -46,10 +46,12 @@ public class CraftEventHandler {
 
 			if(player.getServer() != null ) {
 				NotAWorld.generateAndTeleportStructure(player, new TestStructure(player));
+			} else {
+				
+				GuiInformation gui = new GuiInformation(new Gui(),"Mission","Suicide-toi pour avoir ta table de craft !");
+				Minecraft.getMinecraft().displayGuiScreen(gui);
 			}
 			
-			GuiInformation gui = new GuiInformation(new Gui(),"Mission","Suicide-toi pour avoir ta table de craft !");
-			Minecraft.getMinecraft().displayGuiScreen(gui);
 		}
 	}
 	

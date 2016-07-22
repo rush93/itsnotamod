@@ -14,8 +14,7 @@ public class PlayerDeathEventHandler extends AbstractStuctureEventHandler{
 
 	@SubscribeEvent
 	public void PlayerDeath(LivingDeathEvent event) {
-		NotAStructure str = runEvent(Name,event);
-		if (str!=null && str.setCancel(Name)) {
+		if (runEvent(Name,event)) {
 			event.getEntityLiving().setHealth(20);
 			event.getEntityLiving().addPotionEffect(new PotionEffect(Potion.getPotionById(11), 10, 10000));
 		}

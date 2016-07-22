@@ -2,10 +2,13 @@ package com.cloudcom.itsnotamod.notaaction.craftingCraft;
 
 import java.util.ArrayList;
 
+import com.cloudcom.itsnotamod.gui.GuiInformation;
 import com.cloudcom.itsnotamod.notaaction.NotAStructure;
 import com.cloudcom.itsnotamod.world.NotAWorld;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.Potion;
