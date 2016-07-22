@@ -1,13 +1,13 @@
 package com.cloudcom.itsnotamod.world;
 
-import org.lwjgl.util.vector.Vector3f;
-
-import com.cloudcom.itsnotamod.structures.NotAStructure;
+import com.cloudcom.itsnotamod.notaaction.NotAStructure;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
@@ -25,12 +25,19 @@ public class NotAWorld {
 		DimensionManager.registerDimension(notADimensionID, notADimentionType);
 	}
 	
-	public static void generateAndTeleportStructure(MinecraftServer server, Entity entity, NotAStructure structure) {
+	public static void generateAndTeleportStructure(EntityPlayer entity, NotAStructure structure) {
+		MinecraftServer server = entity.getServer();
+		BlockPos oldPosition = entity.getPosition();
 		teleportEntityToDimension( server, entity, notADimensionID);
 		entity.setPositionAndUpdate(lastX, 64, 0);
-		structure.generateStructure(entity.getPosition(), entity.getEntityWorld());
+		structure.generateStructure(entity.getPosition(), entity.getEntityWorld(), oldPosition);
 		lastX+=structure.getMaxXSize();
 		structure.activeEntity(entity);
+	}
+	
+	public static void BackToOverWorld(EntityPlayer player, double x, double y, double z) {
+		teleportEntityToDimension( player.getServer(), player, 0);
+		player.setPositionAndUpdate(x, y, z);
 	}
 	
 	private static Entity teleportEntityToDimension(MinecraftServer server, Entity entity, int dimension)
