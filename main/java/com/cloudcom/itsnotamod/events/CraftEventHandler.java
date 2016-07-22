@@ -1,9 +1,12 @@
 package com.cloudcom.itsnotamod.events;
 
+import com.cloudcom.itsnotamod.gui.GuiInformation;
 import com.cloudcom.itsnotamod.structures.TestStructure;
 import com.cloudcom.itsnotamod.world.NotAWorld;
 import com.cloudcom.itsnotamod.world.NotAWorldTeleporter;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.command.CommandException;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
@@ -48,10 +51,12 @@ public class CraftEventHandler {
 			}
 
 
-			if(player.getServer() != null ) {
+			/*if(player.getServer() != null ) {
 				NotAWorld.generateAndTeleportStructure(player.getServer(), player, new TestStructure());
-			}
+			}*/
 			
+			GuiInformation gui = new GuiInformation(new Gui(),"Mission","Prêt à en découdre ? Survis 15 contre cette armée de zombies !");
+			Minecraft.getMinecraft().displayGuiScreen(gui);
 		}
 	}
 	
