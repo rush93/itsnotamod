@@ -1,6 +1,6 @@
 package com.cloudcom.itsnotamod.world;
 
-import com.cloudcom.itsnotamod.notaaction.NotAStructure;
+import com.cloudcom.itsnotamod.action.NotAStructure;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;

@@ -1,7 +1,7 @@
-package com.cloudcom.itsnotamod.notaaction.craftingCraft;
+package com.cloudcom.itsnotamod.action.craftingCraft;
 
 
-import com.cloudcom.itsnotamod.gui.GuiInformation;
+import com.cloudcom.itsnotamod.gui.NotAGuiInformation;
 import com.cloudcom.itsnotamod.world.NotAWorld;
 
 import net.minecraft.client.Minecraft;
@@ -48,7 +48,7 @@ public class CraftEventHandler {
 				NotAWorld.generateAndTeleportStructure(player, new TestStructure(player));
 			} else {
 				
-				GuiInformation gui = new GuiInformation(new Gui(),"Mission","Suicide-toi pour avoir ta table de craft !");
+				NotAGuiInformation gui = new NotAGuiInformation(new Gui(),"Mission","Suicide-toi pour avoir ta table de craft !");
 				Minecraft.getMinecraft().displayGuiScreen(gui);
 			}
 			

@@ -1,4 +1,4 @@
-package com.cloudcom.itsnotamod.notaaction.craftingCraft;
+package com.cloudcom.itsnotamod.action.craftingCraft;
 
 import net.minecraftforge.common.MinecraftForge;
 
