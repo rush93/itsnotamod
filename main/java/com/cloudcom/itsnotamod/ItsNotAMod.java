@@ -2,10 +2,9 @@ package com.cloudcom.itsnotamod;
 
 import org.apache.logging.log4j.Logger;
 
-import com.cloudcom.itsnotamod.events.CraftEventHandler;
+import com.cloudcom.itsnotamod.notaaction.craftingCraft.CraftingCraft;
 import com.cloudcom.itsnotamod.world.NotAWorld;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -34,7 +33,8 @@ public class ItsNotAMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		// Event de craft
-		MinecraftForge.EVENT_BUS.register(new CraftEventHandler());
+		CraftingCraft.init();
+		
 		// Event de ...
 		NotAWorld.init();
 		proxy.init();

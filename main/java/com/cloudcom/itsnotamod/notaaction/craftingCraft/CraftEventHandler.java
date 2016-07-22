@@ -1,15 +1,13 @@
-package com.cloudcom.itsnotamod.events;
+package com.cloudcom.itsnotamod.notaaction.craftingCraft;
+
 
 import com.cloudcom.itsnotamod.gui.GuiInformation;
-import com.cloudcom.itsnotamod.structures.TestStructure;
 import com.cloudcom.itsnotamod.world.NotAWorld;
-import com.cloudcom.itsnotamod.world.NotAWorldTeleporter;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
@@ -47,11 +45,13 @@ public class CraftEventHandler {
 
 
 			if(player.getServer() != null ) {
-				NotAWorld.generateAndTeleportStructure(player.getServer(), player, new TestStructure());
+				NotAWorld.generateAndTeleportStructure(player, new TestStructure(player));
+			} else {
+				
+				GuiInformation gui = new GuiInformation(new Gui(),"Mission","Suicide-toi pour avoir ta table de craft !");
+				Minecraft.getMinecraft().displayGuiScreen(gui);
 			}
 			
-			GuiInformation gui = new GuiInformation(new Gui(),"Mission","Suicide-toi pour avoi ta table de craft !");
-			Minecraft.getMinecraft().displayGuiScreen(gui);
 		}
 	}
 	
