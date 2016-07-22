@@ -1,4 +1,4 @@
-package com.cloudcom.itsnotamod.notaaction;
+package com.cloudcom.itsnotamod.action;
 
 import java.util.ArrayList;
 

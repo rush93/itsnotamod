@@ -2,7 +2,7 @@ package com.cloudcom.itsnotamod;
 
 import org.apache.logging.log4j.Logger;
 
-import com.cloudcom.itsnotamod.notaaction.craftingCraft.CraftingCraft;
+import com.cloudcom.itsnotamod.action.craftingCraft.CraftingCraft;
 import com.cloudcom.itsnotamod.world.NotAWorld;
 
 import net.minecraftforge.fml.common.Mod;

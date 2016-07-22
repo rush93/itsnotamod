@@ -15,13 +15,13 @@ import net.minecraft.world.GameType;
 import net.minecraft.world.WorldSettings;
 import net.minecraft.world.WorldType;
 
-public class GuiInformation extends GuiScreen {
+public class NotAGuiInformation extends GuiScreen {
 	
 	private Gui parentScreen;
 	private String title;
 	private String description;
 	
-	public GuiInformation(Gui screen, String title, String description) {
+	public NotAGuiInformation(Gui screen, String title, String description) {
 		this.parentScreen = screen;
 		this.title = title;
 		this.description = description;

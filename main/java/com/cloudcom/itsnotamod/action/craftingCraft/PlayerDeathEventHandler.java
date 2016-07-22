@@ -1,7 +1,7 @@
-package com.cloudcom.itsnotamod.notaaction.craftingCraft;
+package com.cloudcom.itsnotamod.action.craftingCraft;
 
-import com.cloudcom.itsnotamod.notaaction.AbstractStuctureEventHandler;
-import com.cloudcom.itsnotamod.notaaction.NotAStructure;
+import com.cloudcom.itsnotamod.action.AbstractStuctureEventHandler;
+import com.cloudcom.itsnotamod.action.NotAStructure;
 
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;

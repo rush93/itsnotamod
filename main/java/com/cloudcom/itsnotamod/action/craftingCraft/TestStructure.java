@@ -1,9 +1,9 @@
-package com.cloudcom.itsnotamod.notaaction.craftingCraft;
+package com.cloudcom.itsnotamod.action.craftingCraft;
 
 import java.util.ArrayList;
 
-import com.cloudcom.itsnotamod.gui.GuiInformation;
-import com.cloudcom.itsnotamod.notaaction.NotAStructure;
+import com.cloudcom.itsnotamod.action.NotAStructure;
+import com.cloudcom.itsnotamod.gui.NotAGuiInformation;
 import com.cloudcom.itsnotamod.world.NotAWorld;
 
 import net.minecraft.block.Block;
