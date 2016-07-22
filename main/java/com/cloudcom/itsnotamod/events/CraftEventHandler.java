@@ -7,17 +7,12 @@ import com.cloudcom.itsnotamod.world.NotAWorldTeleporter;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
-import net.minecraft.command.CommandException;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityList;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 
@@ -51,11 +46,11 @@ public class CraftEventHandler {
 			}
 
 
-			/*if(player.getServer() != null ) {
+			if(player.getServer() != null ) {
 				NotAWorld.generateAndTeleportStructure(player.getServer(), player, new TestStructure());
-			}*/
+			}
 			
-			GuiInformation gui = new GuiInformation(new Gui(),"Mission","Prêt à en découdre ? Survis 15 contre cette armée de zombies !");
+			GuiInformation gui = new GuiInformation(new Gui(),"Mission","Suicide-toi pour avoi ta table de craft !");
 			Minecraft.getMinecraft().displayGuiScreen(gui);
 		}
 	}
